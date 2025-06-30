@@ -1,0 +1,107 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #2d3748;
+}
+
+/* Cards layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual card */
+.cards > div {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.cards > div:hover {
+  transform: translateY(-5px);
+}
+
+/* Pokémon image */
+.cards img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Pokémon name with background */
+.cards p:first-of-type {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+  background-color: #e2e8f0; /* light blue-gray */
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #2d3748;
+}
+
+/* Info section inside card */
+.pokeMon_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Type info background */
+.pokeMon_info p:nth-child(1) {
+  background-color: #bee3f8; /* soft blue */
+  color: #2a4365;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+/* Base stat (middle) styling */
+.pokeMon_info p:nth-child(2) {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Abilities with background */
+.pokeMon_info p:nth-child(3) {
+  background-color: #c6f6d5; /* soft green */
+  color: #22543d;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Loading / error */
+p {
+  text-align: center;
+  font-size: 1.1rem;
+}
